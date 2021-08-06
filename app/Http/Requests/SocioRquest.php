@@ -32,6 +32,9 @@ class SocioRquest extends FormRequest
             'revalidacion' => 'nullable',
             'num_operacion' => '',
             'vigencia_operacion' => '',
+            'image' => ['image', 'mimes:jpg', 'max:2048', 'nullable'],
+            'status' => 'nullable',
+            'admin_since' => 'nullable',
         ];
     }
 }

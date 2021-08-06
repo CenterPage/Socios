@@ -23,6 +23,8 @@ class CreateSociosTable extends Migration
             $table->string('revalidacion')->nullable();
             $table->string('num_operacion');
             $table->string('vigencia_operacion');
+            $table->string('image')->nullable();
+            $table->integer('status')->nullable()->default(0);
             $table->timestamps();
         });
     }

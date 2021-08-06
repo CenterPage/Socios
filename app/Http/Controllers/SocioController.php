@@ -49,6 +49,8 @@ class SocioController extends Controller
 
     public function destroy(Socio $socio)
     {
-        //
+        $socio->status = 1;
+        $socio->save();
+        return back();
     }
 }

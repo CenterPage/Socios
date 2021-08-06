@@ -122,6 +122,11 @@
             </div>
         @enderror
     </div>
+
+    <div class="form-group col-md-6">
+        <label for="exampleFormControlFile1">Foto</label>
+        <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+    </div>
 </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">{{ $btn }}</button>

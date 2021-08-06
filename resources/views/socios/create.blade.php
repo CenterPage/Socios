@@ -9,7 +9,7 @@
                     Nuevo Socio
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('socios.store') }}">
+                    <form method="POST" action="{{ route('socios.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         @include('socios.form', [

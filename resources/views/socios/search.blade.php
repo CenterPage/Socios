@@ -40,6 +40,7 @@
                 <th scope="col">Revalicación</th>
                 <th scope="col">N. Operación</th>
                 <th scope="col">Vigencia Operación</th>
+                <th scope="col">QR</th>
                 <th scope="col">Actividad</th>
             </tr>
         </thead>
@@ -53,6 +54,9 @@
                     <td>{{ $socio->revalidacion }}</td>
                     <td>{{ $socio->num_operacion }}</td>
                     <td>{{ $socio->vigencia_operacion }}</td>
+                    @if ($socio->status == 1)
+                        <td><span class="badge badge-info text-white">Generado</span></td>
+                    @endif
                     <td>
                         <a href="{{ route('socios.show', $socio->url) }}">
                             @include('icons.icon-see')
