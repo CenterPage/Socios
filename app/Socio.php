@@ -27,7 +27,9 @@ class Socio extends Model
             $socio->url = \Str::slug($attributes['nombre_socio']);
         }
 
-        $socio->image = '/storage/'.request()->file('image')->store('fotos', 'public');
+        if (!empty($attributes['image'])) {
+            $socio->image = '/storage/'.request()->file('image')->store('fotos', 'public');
+        }
 
         $socio->save();
 

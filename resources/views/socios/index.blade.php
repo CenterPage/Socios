@@ -56,6 +56,8 @@
                     <td>{{ $socio->vigencia_operacion }}</td>
                     @if ($socio->status == 1)
                         <td><span class="badge badge-info text-white">Generado</span></td>
+                    @else
+                        <td></td>
                     @endif
                     <td>
                         <a href="{{ route('socios.show', $socio->url) }}">

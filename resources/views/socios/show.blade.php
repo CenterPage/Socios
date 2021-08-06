@@ -20,7 +20,7 @@
             height: auto;
             margin: auto;
             position: absolute;
-            margin-top: 9rem;
+            /*margin-top: 9rem;*/
         }
         .marca-de-agua img {
             padding: 0;
@@ -46,15 +46,15 @@
     </nav>
 
     <div class="container py-4">
-        <div class="col-sm d-flex justify-content-center flex-column align-items-center mb-3">
+        <div class="col-sm d-flex justify-content-center flex-column align-items-center ">
             <li class="list-group-item border-0 m-0 pt-0 text-center bg-transparent">
                 <strong><h5 class="font-weight-bold">TARJETA DE IDENTIFICACIÓN</h5></strong>
             </li>
-            <img
+{{--             <img
                 src="{{ asset($socio->image) }}"
                 alt="{{ $socio->nombre_socio }}"
                 class='img-thumbnail' style="width: 150px; height: 200px;"
-            >
+            > --}}
 
         </div>
 
@@ -85,21 +85,21 @@
         <div class="d-flex justify-content-center flex-column align-items-center">
             <ul class="list-group col-md-3">
                 <li class="list-group-item color-box-header">
-                    <strong>MIEMBRO DE LA ASOCIACIÓN</strong>
+                    <strong class="font-weight-bold">MIEMBRO DE LA ASOCIACIÓN</strong>
                 </li>
-                <li class="list-group-item color-box">
+                <li class="list-group-item ">
                     <strong>Nombre:</strong> {{ Illuminate\Support\Str::title($socio->nombre_socio) }}
                 </li>
-                <li class="list-group-item color-box">
+                <li class="list-group-item ">
                     <strong>N. Placa:</strong> {{ $socio->num_placa }}
                 </li>
-                <li class="list-group-item color-box">
+                <li class="list-group-item ">
                     <strong>Asociación:</strong> {{ Illuminate\Support\Str::title($socio->nombre_asociacion) }}
                 </li>
-                <li class="list-group-item color-box">
+                <li class="list-group-item ">
                     <strong>N. Operación:</strong> {{ Illuminate\Support\Str::title($socio->num_operacion) }}
                 </li>
-                <li class="list-group-item color-box">
+                <li class="list-group-item ">
                     <strong>Vigencia:</strong> {{ Illuminate\Support\Str::title($socio->vigencia_operacion) }}
                 </li>
             </ul>

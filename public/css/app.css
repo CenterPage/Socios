@@ -73,6 +73,14 @@
   padding-right: 0px !important;
 }
 
+.color-box-header {
+  background-color: #F3F4F6 !important;
+}
+
+.color-box {
+  background-color: #F9FAFB !important;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
