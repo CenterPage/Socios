@@ -48,7 +48,7 @@
     <div class="container py-4">
         <div class="col-sm d-flex justify-content-center flex-column align-items-center mb-3">
             <li class="list-group-item border-0 m-0 pt-0 text-center bg-transparent">
-                <strong><h5 class="font-weight-bold">CARNET DE IDENTIFICACIÓN PARA SOCIOS</h5></strong>
+                <strong><h5 class="font-weight-bold">TARJETA DE IDENTIFICACIÓN</h5></strong>
             </li>
             <img
                 src="{{ asset($socio->image) }}"
