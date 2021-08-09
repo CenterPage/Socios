@@ -18,6 +18,57 @@
     </div>
 
     <div class="form-group col-md-6">
+        <label for="inputEmail4 font-weight-bold">Nombre Propietario</label>
+        <input type="text"
+            name="nombre_propietario"
+            class="form-control @error('nombre_propietario') is-invalid  @enderror"
+            value="{{ old('nombre_propietario', $socio->nombre_propietario) }}"
+            id="inputEmail4"
+            placeholder="Ejm: ALBERCA YANAYACO TERESA"
+        >
+
+        @error('nombre_propietario')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="inputEmail4 font-weight-bold">DNI Socio</label>
+        <input type="text"
+            name="dni_socio"
+            class="form-control @error('dni_socio') is-invalid  @enderror"
+            value="{{ old('dni_socio', $socio->dni_socio) }}"
+            id="inputEmail4"
+            placeholder="Ejm: ALBERCA YANAYACO TERESA"
+        >
+
+        @error('dni_socio')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="inputEmail4 font-weight-bold">DNI Propietario</label>
+        <input type="text"
+            name="dni_propietario"
+            class="form-control @error('dni_propietario') is-invalid  @enderror"
+            value="{{ old('dni_propietario', $socio->dni_propietario) }}"
+            id="inputEmail4"
+            placeholder="Ejm: ALBERCA YANAYACO TERESA"
+        >
+
+        @error('dni_propietario')
+            <div class="invalid-feedback">
+                {{$message}}
+            </div>
+        @enderror
+    </div>
+
+    <div class="form-group col-md-6">
         <label for="inputEmail1">N. Placa</label>
         <input type="text"
             name="num_placa"
@@ -123,7 +174,7 @@
         @enderror
     </div>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-6 d-none">
         <label for="exampleFormControlFile1">Foto</label>
         <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
     </div>

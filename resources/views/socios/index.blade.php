@@ -34,10 +34,12 @@
         <thead>
             <tr>
                 <th scope="col">Nombre Socio</th>
+                <th scope="col">DNI Socio</th>
+                <th scope="col">Nombre Propietario</th>
                 <th scope="col">N. Placa</th>
                 <th scope="col">Asociación</th>
-                <th scope="col">Expedición</th>
-                <th scope="col">Revalicación</th>
+                <!--<th scope="col">Expedición</th>-->
+                <!--<th scope="col">Revalicación</th>-->
                 <th scope="col">N. Operación</th>
                 <th scope="col">Vigencia Operación</th>
                 <th scope="col">QR</th>
@@ -48,10 +50,12 @@
             @forelse ($socios as $socio)
                 <tr>
                     <td>{{ $socio->nombre_socio }}</td>
+                    <td>{{ $socio->dni_socio }}</td>
+                    <td>{{ $socio->nombre_propietario }}</td>
                     <td>{{ $socio->num_placa }}</td>
                     <td>{{ $socio->nombre_asociacion }}</td>
-                    <td>{{ $socio->expedicion }}</td>
-                    <td>{{ $socio->revalidacion }}</td>
+                    <!--<td>{{ $socio->expedicion }}</td>-->
+                    <!--<td>{{ $socio->revalidacion }}</td>-->
                     <td>{{ $socio->num_operacion }}</td>
                     <td>{{ $socio->vigencia_operacion }}</td>
                     @if ($socio->status == 1)

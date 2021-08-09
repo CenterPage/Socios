@@ -25,6 +25,9 @@ class SocioRquest extends FormRequest
     {
         return [
             'nombre_socio' => '',
+            'nombre_propietario' => 'nullable',
+            'dni_socio' => 'nullable',
+            'dni_propietario' => 'nullable',
             'url' => 'nullable',
             'num_placa' => '',
             'nombre_asociacion' => '',

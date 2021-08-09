@@ -48,7 +48,7 @@
     <div class="container py-4">
         <div class="col-sm d-flex justify-content-center flex-column align-items-center ">
             <li class="list-group-item border-0 m-0 pt-0 text-center bg-transparent">
-                <strong><h5 class="font-weight-bold">TARJETA DE IDENTIFICACIÓN</h5></strong>
+                <strong><h5 class="font-weight-bold">TARJETA DE CIRCULACIÓN</h5></strong>
             </li>
 {{--             <img
                 src="{{ asset($socio->image) }}"
@@ -89,6 +89,9 @@
                 </li>
                 <li class="list-group-item ">
                     <strong>Nombre:</strong> {{ Illuminate\Support\Str::title($socio->nombre_socio) }}
+                </li>
+                <li class="list-group-item ">
+                    <strong>D.N.I:</strong> {{ $socio->dni_socio }}
                 </li>
                 <li class="list-group-item ">
                     <strong>N. Placa:</strong> {{ $socio->num_placa }}
