@@ -106,12 +106,13 @@
 
     <div class="form-group col-md-6">
         <label for="inputEmail1">Expedición</label>
-        <input type="text"
+        <input type="date"
             name="expedicion"
+            min="2015-01-01" max="2030-12-31" required
             class="form-control @error('expedicion') is-invalid  @enderror"
-            value="{{ old('expedicion', $socio->expedicion) }}"
-            id="inputEmail1"
-            placeholder="Ejm: "
+            value="<?php echo date("Y-m-d"); ?>"
+            id="inputCity"
+            required
         >
 
         @error('expedicion')
@@ -123,12 +124,13 @@
 
     <div class="form-group col-md-6">
         <label for="inputEmail1">Revalidación</label>
-        <input type="text"
+        <input type="date"
             name="revalidacion"
+            min="2015-01-01" max="2030-12-31" required
             class="form-control @error('revalidacion') is-invalid  @enderror"
-            value="{{ old('revalidacion', $socio->revalidacion) }}"
-            id="inputEmail1"
-            placeholder="Ejm: "
+            value="<?php echo date("Y-m-d"); ?>"
+            id="inputCity"
+            required
         >
 
         @error('revalidacion')

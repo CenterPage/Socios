@@ -22,8 +22,8 @@ class CreateSociosTable extends Migration
             $table->string('url')->nullable();
             $table->string('num_placa');
             $table->string('nombre_asociacion');
-            $table->string('expedicion')->nullable();
-            $table->string('revalidacion')->nullable();
+            $table->date('expedicion')->nullable();
+            $table->date('revalidacion')->nullable();
             $table->string('num_operacion');
             $table->string('vigencia_operacion');
             $table->string('image')->nullable();

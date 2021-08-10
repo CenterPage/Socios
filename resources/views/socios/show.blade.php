@@ -20,13 +20,16 @@
             height: auto;
             margin: auto;
             position: absolute;
-            /*margin-top: 9rem;*/
+            margin-top: 4rem;
         }
         .marca-de-agua img {
             padding: 0;
             width: 100%;
             height: auto;
             opacity: 0.1;
+        }
+        .bg-segundo {
+            background-color: #6366F1 !important;
         }
     </style>
 </head>
@@ -36,7 +39,8 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Muni Castilla</a>
+      {{-- <a class="navbar-brand" href="#">Muni Castilla</a> --}}
+      <img class="navbar-brand" alt="" src="{{ asset('/img/logo.png') }}" style="width: 120px;" />
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,7 +52,7 @@
     <div class="container py-4">
         <div class="col-sm d-flex justify-content-center flex-column align-items-center ">
             <li class="list-group-item border-0 m-0 pt-0 text-center bg-transparent">
-                <strong><h5 class="font-weight-bold">TARJETA DE CIRCULACIÓN</h5></strong>
+                <strong><h5 class="font-weight-bold">TARJETA DE CIRCULACIÓN VEHICULAR</h5></strong>
             </li>
 {{--             <img
                 src="{{ asset($socio->image) }}"
@@ -100,31 +104,34 @@
                     <strong>Asociación:</strong> {{ Illuminate\Support\Str::title($socio->nombre_asociacion) }}
                 </li>
                 <li class="list-group-item ">
+                    <strong>Expedición TCV:</strong> {{ $socio->expedicion }}
+                </li>
+                <li class="list-group-item ">
+                    <strong>Revalidación TCV:</strong> {{ $socio->revalidacion }}
+                </li>
+            </ul>
+            <ul class='list-group col-md-3 mt-3'>
+                <li class="list-group-item color-box-header">
+                    <strong>PERSONAL E INTRANSFERIBLE</strong>
+                </li>
+                <li class="list-group-item ">
                     <strong>N. Operación:</strong> {{ Illuminate\Support\Str::title($socio->num_operacion) }}
                 </li>
                 <li class="list-group-item ">
                     <strong>Vigencia:</strong> {{ Illuminate\Support\Str::title($socio->vigencia_operacion) }}
                 </li>
             </ul>
-            {{-- <ul class='list-group col-md-3 mt-3'>
-                <li class="list-group-item color-box-header"><strong>ADULTO RESPONSABLE</strong></li>
-                <li class="list-group-item color-box">
-                    <strong>Nombre:</strong> {{ Illuminate\Support\Str::title($listadomascota->user->name) }}
-                </li>
-                <li class="list-group-item color-box">
-                    <strong>Apellidos:</strong> {{ Illuminate\Support\Str::title($listadomascota->user->apellidos) }}
-                </li>
-                <li class="list-group-item color-box">
-                    <strong>Celular:</strong> {{ $listadomascota->user->celular }}
-                </li>
-                <li class="list-group-item color-box">
-                    <strong>Dirección:</strong> {{ Illuminate\Support\Str::title($listadomascota->user->direccion) }}
-                </li>
-                <li class="list-group-item color-box">
-                    <strong>F. Emisión:</strong> {{ Carbon\Carbon::parse($listadomascota->created_at)->format('Y-m-d') }}
-                </li>
-            </ul> --}}
         </div>
     </div>
+    <footer class="bg-primary pt-4 pb-2 text-white">
+        <div class="text-center">
+            <h5 class="font-weight-bold">Muni Castilla</h5>
+            <br>
+            <div>
+                <p><a class="text-white" href="#">Normal Legal</a> | <a class="text-white" href="#">Política de Privacidad</a></p>
+            </div>
+            <p>© 2019 - {{ date('Y') }} <strong>·</strong> <a class="text-white" href="https://municastilla.gob.pe/wp/">Municastilla.gob.pe</a></p>
+        </div>
+    </footer>
 </body>
 </html>
