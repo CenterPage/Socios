@@ -15,7 +15,7 @@ class SocioController extends Controller
 
     public function index()
     {
-        $socios = Socio::latest()->paginate();
+        $socios = Socio::where('status', 0)->latest()->paginate();
         return view('socios.index', compact('socios'));
     }
 
